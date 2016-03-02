@@ -29,3 +29,19 @@ go_binary(
 	    "@bare//:bare",
 	],
 )
+
+go_binary(
+	name ="subbare",
+	srcs = [ "subbare.go" ],
+	deps = [
+	    "//submodule/src:bare",
+	],
+)
+
+go_binary(
+	name ="subremote",
+	srcs = [ "subremote.go" ],
+	deps = [
+	    "//submodule/src/remote",
+	],
+)

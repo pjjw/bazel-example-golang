@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-	
-	"github.com/lar/bazel-example-golang/local/local"
+	"github.com/laramiel/bazel-example-golang/local/local"
 )
 
 func main() {

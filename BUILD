@@ -4,10 +4,28 @@ package(
     default_visibility = ["//visibility:public"],
 )
 
-go_prefix("github.com/lar/bazel-example-golang")
+go_prefix("github.com/laramiel/bazel-example-golang")
 
 go_binary(
 	name ="hello",
 	srcs = [ "hello.go" ],
-	deps = [ "//local" ],
+	deps = [
+	    "//local",
+	],
+)
+
+go_binary(
+	name ="remote",
+	srcs = [ "remote.go" ],
+	deps = [
+	    "@remote//:remote",
+	],
+)
+
+go_binary(
+	name ="bare",
+	srcs = [ "bare.go" ],
+	deps = [
+	    "@bare//:bare",
+	],
 )

@@ -20,3 +20,28 @@ $ bazel run //submodule:bare
 $ bazel run //submodule:remote
 ```
 
+# Explanation
+
+This repository works in conjunction with other git repositories to
+provide a demonstration of Bazel BUILD rules for golang.
+
+* [bazel-example-golang](https://github.com/laramiel/bazel-example-golang)  
+  The main repository, demonstrating binary, local, and remote repository usage.
+
+* [bazel-example-golang-remote](https://github.com/laramiel/bazel-example-golang-remote)  
+  An example remote repository which includes Bazel rules.
+
+* [bazel-example-golang-bare](https://github.com/laramiel/bazel-example-golang-bare)
+  An example remote repository without any Bazel rules.
+
+
+Each of the remote repositories is linked into `go_binary()` targets in several
+ways:
+
+1. Using the WORKSPACE file to define `git_repository()` rules.
+   This accounts for the `:remote` and `:bare` targets.
+
+2. Using git submodules to import the repository source, and
+   using those paths. This accounts for the `//submodule:bare`
+   and `//submodule:remote` targets.
+

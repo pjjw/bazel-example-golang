@@ -7,4 +7,10 @@ This requires bazel release > `bazel-0.20`.
 
 ```
 $ bazel run :hello
+
+$ bazel run :remote
+$ bazel run :bare
+$ bazel run :subbare
+$ bazel run :subremote
 ```
+

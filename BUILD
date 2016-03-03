@@ -4,11 +4,16 @@ package(
     default_visibility = ["//visibility:public"],
 )
 
-go_prefix("github.com/laramiel/bazel-example-golang")
+go_prefix("github.com/laramiel/bazel-example-golang/")
 
 go_binary(
 	name ="hello",
 	srcs = [ "hello.go" ],
+)
+
+go_binary(
+	name ="local",
+	srcs = [ "local.go" ],
 	deps = [
 	    "//local",
 	],
@@ -27,21 +32,5 @@ go_binary(
 	srcs = [ "bare.go" ],
 	deps = [
 	    "@bare//:bare",
-	],
-)
-
-go_binary(
-	name ="subbare",
-	srcs = [ "subbare.go" ],
-	deps = [
-	    "//submodule/src:bare",
-	],
-)
-
-go_binary(
-	name ="subremote",
-	srcs = [ "subremote.go" ],
-	deps = [
-	    "//submodule/src/remote",
 	],
 )

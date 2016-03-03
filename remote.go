@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello", remote.World())
+	fmt.Println("Hello ", remote.World())
 }

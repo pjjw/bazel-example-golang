@@ -8,9 +8,11 @@ This requires bazel release > `bazel-0.20`.
 ```
 $ bazel run :hello
 
+$ bazel run :local
 $ bazel run :remote
 $ bazel run :bare
-$ bazel run :subbare
-$ bazel run :subremote
+
+$ bazel run //submodule:bare
+$ bazel run //submodule:remote
 ```
 

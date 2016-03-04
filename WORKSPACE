@@ -3,7 +3,7 @@ load("@bazel_tools//tools/build_rules/go:def.bzl", "go_repositories")
 go_repositories()
 
 git_repository(
-  name = "remote",
+  name = "ws_remote",
   remote = "https://github.com/laramiel/bazel-example-golang-remote.git",
   commit = "8f2e405",
 )
@@ -23,7 +23,7 @@ go_library(
 """
 
 new_git_repository(
-  name = "bare",
+  name = "ws_bare",
   remote = "https://github.com/laramiel/bazel-example-golang-bare.git",
   commit = "3bd848f",
   build_file_content = BARE_BUILD

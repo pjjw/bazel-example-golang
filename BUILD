@@ -7,30 +7,30 @@ package(
 go_prefix("github.com/laramiel/bazel-example-golang/")
 
 go_binary(
-	name ="hello",
-	srcs = [ "hello.go" ],
+    name = "hello",
+    srcs = ["hello.go"],
 )
 
 go_binary(
-	name ="local",
-	srcs = [ "local.go" ],
-	deps = [
-	    "//local",
-	],
+    name = "local",
+    srcs = ["local.go"],
+    deps = [
+        "//local",
+    ],
 )
 
 go_binary(
-	name ="remote",
-	srcs = [ "remote.go" ],
-	deps = [
-	    "@remote//:remote",
-	],
+    name = "remote",
+    srcs = ["remote.go"],
+    deps = [
+        "@ws_remote//:remote",
+    ],
 )
 
 go_binary(
-	name ="bare",
-	srcs = [ "bare.go" ],
-	deps = [
-	    "@bare//:bare",
-	],
+    name = "bare",
+    srcs = ["bare.go"],
+    deps = [
+        "@ws_bare//:bare",
+    ],
 )

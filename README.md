@@ -18,6 +18,10 @@ $ bazel run :bare
 $ git submodule update --init --recursive
 $ bazel run //submodule:bare
 $ bazel run //submodule:remote
+
+$ bazel run //with_vendor:remote
+$ bazel run //with_vendor:bare
+
 ```
 
 # Explanation
@@ -44,4 +48,6 @@ ways:
 2. Using git submodules to import the repository source, and
    using those paths. This accounts for the `//submodule:bare`
    and `//submodule:remote` targets.
+
+3. Using the VENDOR extension introduced in go1.6.
 

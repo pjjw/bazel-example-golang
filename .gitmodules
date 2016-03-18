@@ -4,3 +4,9 @@
 [submodule "submodule/src/remote"]
 	path = submodule/src/remote
 	url = git://github.com/laramiel/bazel-example-golang-remote
+[submodule "vendor/github.com/laramiel/bazel-example-golang-remote"]
+	path = vendor/github.com/laramiel/bazel-example-golang-remote
+	url = git://github.com/laramiel/bazel-example-golang-remote
+[submodule "vendor/github.com/laramiel/bazel-example-golang-bare"]
+	path = vendor/github.com/laramiel/bazel-example-golang-bare
+	url = git://github.com/laramiel/bazel-example-golang-bare

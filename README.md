@@ -13,7 +13,6 @@ $ git submodule foreach git pull origin master
 
 $ bazel run :hello
 
-$ bazel run :local
 $ bazel run :remote
 $ bazel run :bare
 

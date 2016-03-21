@@ -8,6 +8,8 @@ This requires bazel release > `bazel-0.20`.
 ```
 $ git clone https://github.com/laramiel/bazel-example-golang.git
 $ cd bazel-example-golang
+$ git submodule init
+$ git submodule foreach git pull origin master
 
 $ bazel run :hello
 

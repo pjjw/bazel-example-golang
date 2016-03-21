@@ -1,4 +1,4 @@
-load("@bazel_tools//tools/build_rules/go:def.bzl", "go_prefix", "go_binary")
+load("@io_bazel_rules_go//go:def.bzl", "go_binary")
 
 package(
     default_visibility = ["//visibility:public"],
@@ -16,9 +16,9 @@ package(
 #)
 
 go_binary(
-	name ="remote",
-	srcs = [ "remote.go" ],
-	deps = [
-	    "//vendor/github.com/laramiel/bazel-example-golang-remote:remote",
-	],
+    name = "remote",
+    srcs = ["remote.go"],
+    deps = [
+        "//vendor/github.com/laramiel/bazel-example-golang-remote:remote",
+    ],
 )

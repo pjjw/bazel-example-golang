@@ -1,4 +1,4 @@
-load("@bazel_tools//tools/build_rules/go:def.bzl", "go_prefix", "go_binary")
+load("@io_bazel_rules_go//go:def.bzl", "go_prefix", "go_binary")
 
 package(
     default_visibility = ["//visibility:public"],
@@ -9,11 +9,6 @@ go_prefix("github.com/laramiel/bazel-example-golang/")
 go_binary(
     name = "hello",
     srcs = ["hello.go"],
-)
-
-go_binary(
-    name = "local",
-    srcs = ["local.go"],
     deps = [
         "//local",
     ],

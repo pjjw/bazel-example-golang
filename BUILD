@@ -4,7 +4,7 @@ package(
     default_visibility = ["//visibility:public"],
 )
 
-go_prefix("github.com/laramiel/bazel-example-golang/")
+go_prefix("github.com/pjjw/bazel-example-golang/")
 
 go_binary(
     name = "hello",

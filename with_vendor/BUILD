@@ -19,6 +19,6 @@ go_binary(
     name = "remote",
     srcs = ["remote.go"],
     deps = [
-        "//vendor/github.com/laramiel/bazel-example-golang-remote:remote",
+        "//vendor/github.com/pjjw/bazel-example-golang-remote:remote",
     ],
 )

@@ -8,7 +8,7 @@ import (
 	//   "github.com/laramiel/bazel-example-golang-remote/remote"
 	// But the bazel build rules for external golang packages like git_repository() are busted.
 	// We hack around it by importing where those external dependencies end up:
-	"github.com/laramiel/bazel-example-golang/external/ws_remote/remote"
+	"github.com/pjjw/bazel-example-golang/external/ws_remote/remote"
 )
 
 func main() {
